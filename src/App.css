@@ -1,0 +1,204 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.testContainer {
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.filterContainer {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  box-shadow: 1px 2px 3px 0 #dcdcdc;
+}
+
+.location-filter-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid #c5c5c5;
+}
+
+.location-filter-container:not(:first-child) {
+  border-left: none;
+}
+
+.location-filter {
+  flex: 1;
+  padding: 20px 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.location-filter:focus {
+  outline: none;
+}
+
+.location-filter > span:after {
+  content: "\25BC";
+  padding-left: 5px;
+  font-size: 12px;
+}
+
+.location-filter.active > span:after {
+  content: "\25B2";
+  padding-left: 5px;
+  font-size: 12px;
+  font-style: normal;
+}
+
+.location-filter.active > span {
+  font-style: italic;
+}
+
+.location-filter > span {
+  font-size: 13px;
+  color: #636363;
+}
+
+.location-filter-dropdown {
+  position: absolute;
+  height: 200px;
+  border: 1px solid #c5c5c5;
+  background-color: #fff;
+  width: 100%;
+  top: 55px;
+  border-top: none;
+  right: -1px;
+  box-shadow: 1px 2px 3px 0 #dcdcdc;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.location-filter-wrapper {
+  display: flex;
+  flex: 3;
+  padding-top: 30px;
+}
+
+.bed-bath-filter {
+ flex: 1;
+}
+
+.bed-bath-filter:first-child {
+  position: relative;
+}
+
+.bed-bath-filter:first-child > .bed-bath-number:after {
+  content: "-";
+  font-size: 24px;
+  z-index: 1;
+  position: absolute;
+  right: -5px;
+  top: 30px;
+}
+
+.apply-filters {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.apply-filters > button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  height: 40px;
+  color: blue;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.apply-filters > button:first-child {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.apply-filters > button:last-child {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.apply-filters > button:focus {
+  outline: none;
+}
+
+input[type="number"] {
+  font-size: 16px;
+  padding: 0;
+  margin: 0 auto;
+  border: none;
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+}
+
+input[type="number"]:focus {
+  outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.adjust-quantity-button {
+  border-color: transparent;
+  background-color: #ececec;
+  border-radius: 50%;
+  padding-bottom: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.adjust-quantity-button:focus {
+  outline: none;
+}
+
+.building-type-items {
+  text-align: left;
+}
+
+.building-type-item {
+  padding: 6px 10px;
+}
+
+.building-type-item > label {
+  padding-left: 15px;
+  cursor: pointer;
+}
